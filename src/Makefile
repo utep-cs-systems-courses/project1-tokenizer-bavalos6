@@ -3,6 +3,8 @@ firsttimer: tokenizer.o history.o UI.o
 
 clean:
 	rm -f *.o firsttimer *# *~ .#*
+run:
+	./firsttimer
 
 history.o: tokenizer.h history.h history.c
 

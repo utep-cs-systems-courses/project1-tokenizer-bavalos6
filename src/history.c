@@ -25,7 +25,13 @@ void add_history(List *list, char *str){
     temp -> next = lol;
   }
   lol -> id = idCount;
-  char *strCp = copy_str(str, word_terminator(str) - word_start(str));
+  int charCount = 0;
+  while(*str != '\0'){
+    charCount++;
+    str++;
+  }
+  str = str-charCount;
+  char *strCp = copy_str(str, charCount);
   lol -> str = strCp;
   lol -> next = NULL;
 }
@@ -37,7 +43,7 @@ char *get_history(List *list, int id){
     id--;
   }
   if(temp == NULL){
-    return ">Non-existent ID";
+    return ">Non-existent ID\n";
   }
   else{
     return temp -> str;

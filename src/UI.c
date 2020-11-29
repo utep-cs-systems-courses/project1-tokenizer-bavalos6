@@ -34,7 +34,7 @@ void main(){
   printf("Hello there, welcome to the tokenizer 2020 v.2\n");
   
   while(1){
-    printf("Choose from the following:\n\ta. Tokenize string\n\tb. View history\n\tc. Exit\n");
+    printf("\nChoose from the following:\n\ta. Tokenize string\n\tb. View history\n\tc. Exit\n");
     printf(">");
     fgets(user_in, 1000, stdin);
     if(*user_in == 'a'){
